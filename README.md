@@ -124,3 +124,11 @@ if __name__ == '__main__':
 {% endfor %}
 ```
 
+## 4교시
+`send` # `form` => `receive`
+
+`request.arg.get`
+
+## 5교시
+[신이 나를 만들 때](https://kr.vonvon.me/quiz/329) 같이  
+URL로 정보 넘기기 `실습`
