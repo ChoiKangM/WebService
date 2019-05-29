@@ -132,3 +132,21 @@ if __name__ == '__main__':
 ## 5교시
 [신이 나를 만들 때](https://kr.vonvon.me/quiz/329) 같이  
 URL로 정보 넘기기 `실습`
+
+## 6교시
+`JSON`
+
+`dict`
+  1. dict 생성
+  2. dict item 추가
+  3. dict value 가져오기
+  4. dict 반복문 활용
+    4-1. 기본
+    4-2. key 반복
+    4-3. value 반복
+    4-4. key, value 반복
+
+[`lotto`](https://dhlottery.co.kr/)
+`lotto API`, `requests`, `JSON`, `append`
+
+## 7교시
