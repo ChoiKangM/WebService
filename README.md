@@ -150,3 +150,38 @@ URL로 정보 넘기기 `실습`
 `lotto API`, `requests`, `JSON`, `append`
 
 ## 7교시
+`list comprehension`
+
+`회차 입력`
+
+```python
+@app.route('/lotto_check')
+def lotto_check():
+  return render_template('lotto_check.html')
+
+@app.route('/lotto_result')
+def lotto_result():
+  lotto_round = request.args.get('lotto_round')
+  url = f"https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={lotto_round}"
+  response = requests.get(url)
+  # response.text # => string
+  lotto = response.json() # => dict
+  winner = []
+  
+  # list comprehension
+  # a = [n*2 for n in range(1, 7)] # => [2, 4, 6, 8, 10, 12]
+  a = [lotto[f'drwtNo{n}'] for n in range(1, 7)]
+  bonus = lotto['bnusNo']
+  winner = f'{a} + {bonus}'
+  return render_template('lotto_result.html', lotto=winner, bonus=bonus)
+```
+
+## 8교시
+`등수 확인`
+
+`Set` = `{요소1, 요소2, ...}` : 집합
+  - `&`(합집합), `|`(교집합)
+
+`in`, `len`
+
+
