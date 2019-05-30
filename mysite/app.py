@@ -53,9 +53,10 @@ def lotto_result():
   if matched == 6:
     result = '1등입니다'
   elif matched == 5:
-    if bonus in my_numbers:
+    if lotto['bnusNo'] in my_numbers:
       result = '2등입니다'
-    result = '3등입니다'
+    else:
+      result = '3등입니다'
   elif matched == 4:
     result = '4등입니다'
   elif matched == 3:
